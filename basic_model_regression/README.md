@@ -55,7 +55,7 @@ def plot_learning_curve(history):
 ```
 
 ### Main process
-- get raw data and normalize them to specific range(-1~1)
+- read and preprocess the data from file 
 - build data loader
 - create the model
 - train and evaluate the model.
