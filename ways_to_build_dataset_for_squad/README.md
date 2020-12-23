@@ -1,4 +1,4 @@
-# Different way of building dataset for squad data.
+# Different ways of building dataset for squad data.
 We study different ways of building dataset for squad data, these ways can also be used in other relevant application, we also make full use of the multiprocessor to process the data, this way of doing can really increase the efficiency of preprocessing.
 
 
