@@ -139,7 +139,7 @@ for string in test_strings:
 # Examples for invalid number:  
 # ["abc", "1a", "1e", "e3", "99e2.5", "--6", "-+3", "95a54e53"]  
 # Scheduled transfering paths between different states:  
-# ![image.png](attachment:image.png)
+# ![transfering_paths](https://raw.github.com/huakeda1/Basic-algorithm-and-framework-study-for-AI/master/valid_number_recognition_with_fsm/associated_pngs/transfering_paths.png)  
 # This task is from [LeetCode](https://leetcode-cn.com/problems/valid-number),you can get more solution from this link.
 
 # In[ ]:
