@@ -21,5 +21,5 @@ As for test dialogues:
 
 ## Code Structure
 The figure below shows the architecture of the whole code:
-![code_architecture](https://raw.github.com/huakeda1/Basic-algorithm-and-framework-study-for-AI/master/dialogue_state_tracking_with_bert/associated_pngs/Dialogue_state_tracking_with_bert.png)
+![code_architecture](https://raw.github.com/huakeda1/Basic-algorithm-and-framework-study-for-AI/master/dialogue_state_tracking_with_bert/associated_pngs/Dialogue_state_tracking_with_bert.png)  
 You can get more detailed information from this [link](https://naotu.baidu.com/file/17947dc4dfba2a8d824b06981d0170f8)
