@@ -1,13 +1,13 @@
 ## Simple language generation model and rationality judgement model  
-1) **n-gram language evaluation model**  
+### **n-gram language evaluation model**  
 The model can be used to decide which sentence is proper according to their probability calculated by the following formulas:  
 $P(word^{t+1}|word^{t},...,word^{1})=P(word^{t+1}|word^{t},...,word^{t-n+2})≈\frac{count(word^{t+1},...word^{t-n+2})}{count(word^{t},...word^{t-n+2})}$  
 A large number of corpus should be provided so as to get more accurate result.
 
-2) **Rule based language generation model**  
+### **Rule based language generation model**  
 The model can generate sentence according to specific grammar designed in advance，the typical grammar and relevant generated sentence are shown as below: 
 
-Typical grammar:  
+#### Typical grammar:  
 host = """
 host = 寒暄 报数 询问 业务相关 结尾   
 报数 = 我是 数字 号 ,  
@@ -23,24 +23,24 @@ host = 寒暄 报数 询问 业务相关 结尾
 具体业务 = 喝酒 | 打牌 | 打猎 | 赌博  
 结尾 = 吗？"""  
 
-Typical generated sentence:  
+#### Typical generated sentence:  
 女士,你好我是52号,您需要玩一玩打猎吗？  
 您好我是453号,请问你要玩一玩打牌吗？  
 你好我是93号,请问你要玩一玩打牌吗？  
 女士,您好我是71号,请问你要耍一耍打猎吗？  
 女士,您好我是296号,请问你要耍一耍喝酒吗？  
 
-Core-code:
+#### Core-code:
 ```
 def generate_sentence_from_grammar(grammar_dict:dict,target_text:str):
     if target_text not in grammar_dict:return target_text
     targets=random.choice(grammar_dict[target_text])
     return ''.join([generate_sentence_from_grammar(grammar_dict,target) for target in targets])
 ```
-3) **Pattern match based language generation model**  
+### **Pattern match based language generation model**  
 The model can generate sentence according to specific grammar designed in advance，the typical grammar and relevant generated sentence are shown as below: 
 
-Typical pattern and generated response
+#### Typical pattern and generated response
 ```
 '?*x想要?*y': ['?x想问你，你觉得?y有什么意义呢?', '为什么你想?y', '?x觉得... 你可以想想你很快就可以有?y了', '你看?x像?y不', '我看你就像?y']
 ```
@@ -48,7 +48,7 @@ Typical pattern and generated response
 input='我想要礼物'
 output=['我想问你，你觉得礼物有什么意义呢？','为什么你想礼物','我觉得...你可以想想你很快就可以有礼物了','你看我像礼物不','我看你就像礼物']
 ```
-Core-code:
+#### Core-code:
 ```
 def conclude_same(string1,string2):
     if string1=='' and string2=='':
